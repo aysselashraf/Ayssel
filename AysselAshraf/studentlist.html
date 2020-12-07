@@ -2,6 +2,9 @@
     <head>
         <title>Student List</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            var arr=[['20191111','salma','cs','studentitem.png'],['20192222','mona','business','studentitem.png'],['20193333','aya','political','studentitem.png']]
+        </script>
     </head>
     <body>
         <nav>
@@ -14,61 +17,53 @@
         </nav>
        <hr>
        <!--Sec-->
-<table  border="1">
-<thead>
-    <tr>
-        <td>ID</td>
-<td>Name</td>
-<td>faculty</td>
-<td>student image</td>
+       <div class="searchbar">
+           <input type="search" class="searchbox">
+       </div>
+       <div id="mytable"> </div>
 
-    </tr>
-</thead>
-<tbody>
-
-    <tr>
-<td>20191111</td>
-<td>salma</td>
-<td>cs</td>
-<td>
-    <img src ="items/download.png" alt="user icon" width="30px" heigth="30px">
-</td>
-</tr>
-<tr>
-<td>
-    20192222</td>
-<td>yomna</td>
-<td>cs</td>
-<td>
-    <img src ="items/download.png" alt="user icon" width="30px" heigth="30px">
-</td>
-</tr>
-<tr>
-<td>20193333</td>
-<td>jasmin</td>
-<td>cs</td>
-<td>
-    <img src ="items/download.png" alt="user icon" width="30px" heigth="30px">
-</td>
-
-    </tr>
-</tbody>
-<tfoot>
-    <tr>
-        <td colspan="4">Total number of students=2</td>
-    </tr>
-</tfoot>
-
-
-
-
-</table>
        
 
        <!--#sec-->
        <hr>
       
-       
+       <script>
+           function init()
+           {
+               var count=0;
+               var mytable='';
+               mytable+='<table  border="1">';
+               mytable+= '<thead>';+
+                         '<tr>';+
+                         '<td>ID</td>';+
+                         '<td>Name</td>';+
+                         '<td>faculty</td>';+
+                         '<td>student image</td>';+
+                         '</tr>';+
+                         '</thead>';+
+                         '</tbody>'
+           
+           for(let i=0 ; i<arr.length ; i++)
+           {
+               var studentID=arr[i][0];
+               var studentName=arr[i][1];
+               var studentFaculty=arr[i][2];
+               var studentitem=arr[i][3];
+
+               mytable+= '<tr><td>'+ID+'</td>'+
+                         '<td>'+Name+'</td>'+
+                         '<td>'+faculty+'</td>'+
+                         '<td>'+'<img src ="items//'+studentitem+'" alt="user icon+'+studentName+'" width="30px" heigth="30px">'+'</td>'
+
+    '</tr>'
+    count ++;
+           }
+           mytable+='</tbody>';
+                        mytable+='<tfoot><tr><td colspan="4">Total no. of Students:'+count+'</td></tr></tfoot></table>';
+
+                            document.getElementById("mytable").innerHTML= mytable ;
+           }
+       </script>
 
     
 

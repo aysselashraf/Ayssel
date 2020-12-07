@@ -67,3 +67,23 @@ tbody tr {
 tfoot tr {
     text-align: center;
 }
+.searchbar{
+    width:20%;
+    height: auto;
+    border:1px;
+    border-color:lightgrey;
+    border-style: solid;
+    padding: 0px 10px;
+    margin: 8px auto;
+    border-radius: 24px;
+    display:flexbox;
+}
+
+.searchbox{
+    width:80%;
+    padding:8px 8px;
+    border:none;
+    margin: 0 2px;
+    outline:none;
+     
+}
